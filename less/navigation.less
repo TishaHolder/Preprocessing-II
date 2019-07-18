@@ -1,1 +1,29 @@
 // Navigation Styles here
+header {
+    width: 100%;
+    height: @header-height;
+
+    .flex-row();
+
+    .logo-div {
+        .flex-row-center();
+        width: 40%;
+        color: @font-color;
+    }
+
+    nav {
+        .flex-row-center();
+        .nav-links-align();
+        width: 60%;        
+
+        a {
+            text-decoration: none;
+            color: @font-color;
+            padding: 5%;            
+        }
+
+    }//end nav
+
+
+}//end header
+

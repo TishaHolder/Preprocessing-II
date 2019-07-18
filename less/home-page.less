@@ -1,11 +1,31 @@
 .home {
 
+  .welcome-section {
+    width: 100%;    
+    .flex-column();
+    justify-content: space-between;
+
+    .welcome-image-div {
+      width: 100%;
+      border-top: 2px dashed @navigation-border;
+
+    }
+
+    .welcome-text {
+      .flex-column();
+      justify-content: space-between;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px dashed @navigation-border;
+    }
+
+  }//end welcome section
+
   .content-section {
-    margin: 30px 0;
+    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
    
     
     .text-content {
@@ -56,6 +76,10 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .button-layout(center, center);
+      }
     }
   }
 }// home
