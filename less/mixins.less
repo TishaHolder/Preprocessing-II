@@ -1,15 +1,16 @@
 // Mixins in here
 
-.button-layout(@justify, @align){
+.button-layout(@justify, @align, @background-color){
 	display: flex;
 	justify-content: @justify;
     align-items: @align;
+    background-color: @eastern-blue;
     width: 75%;
     color: white;
-    background-color: #008080;
+    
     padding: 4% 10% 4% 10%;
     font-size: 2rem;
-    border-radius: 12%;
+    border-radius: 10px;
 }
 
 .flex-row {
