@@ -147,8 +147,22 @@
       }
 
       .btn {
-        .button-layout(@center-justify, @center-align, @eastern-blue);
-      }
-    }
-  }
+        .button-layout(@center-justify, @center-align, @eastern-blue);  
+
+       //button hover       
+       &:hover {
+
+          .animation-hover-mixin(@animationname, @animationduration, @hover-distance); //calls parametric mixin that changes the button color and moves the button upwards
+          cursor: pointer; //changes cursor to finger pointer            
+
+       }         
+
+      }//end btn
+     
+         
+      
+    }//end destination
+
+  }//end content-pick
+
 }// home

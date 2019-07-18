@@ -1,17 +1,31 @@
 // Mixins in here
 
-.button-layout(@justify, @align, @background-color){
+.button-layout(@justify: center, @align: center, @background-color: @easternblue){
 	display: flex;
 	justify-content: @justify;
     align-items: @align;
     background-color: @eastern-blue;
     width: 75%;
-    color: white;
-    
+    color: white;    
     padding: 4% 10% 4% 10%;
     font-size: 2rem;
     border-radius: 10px;
 }
+
+//button hover keyframe
+@keyframes button-hover {
+    from {background-color: @eastern-blue;}
+    to {background-color: @funbus-red;}
+}
+
+//button hover mixin
+.animation-hover-mixin (@animationname, @duration, @hover-distance) {   
+    animation-name: @animationname;
+    animation-duration: @duration;
+    margin-top: @hover-distance;//moves the button upwards during hovering
+    
+}//end animation-hover-mixin
+
 
 .flex-row {
     display: flex;
