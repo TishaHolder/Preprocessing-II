@@ -12,8 +12,19 @@
     border-radius: 10px;
 }
 
+.animation-background-color(@from-color, @to-color) {
+
+    @keyframes button-hover {
+
+       from {background-color:@from-color;}
+       to {background-color:@to-color;}
+    }
+    animation-name: button-hover;
+    animation-duration:3s;
+}
+
 //button hover keyframe
-@keyframes button-hover {
+/*@keyframes button-hover {
     from {background-color: @eastern-blue;}
     to {background-color: @funbus-red;}
 }
@@ -24,7 +35,7 @@
     animation-duration: @duration;
     margin-top: @hover-distance;//moves the button upwards during hovering
     
-}//end animation-hover-mixin
+}//end animation-hover-mixin*/
 
 
 .flex-row {

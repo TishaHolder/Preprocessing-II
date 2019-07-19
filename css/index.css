@@ -1,11 +1,15 @@
-@keyframes button-hover {
-  from {
-    background-color: #17A2B8;
-  }
-  to {
-    background-color: orangered;
-  }
+/*@keyframes button-hover {
+    from {background-color: @eastern-blue;}
+    to {background-color: @funbus-red;}
 }
+
+//button hover mixin
+.animation-hover-mixin (@animationname, @duration, @hover-distance) {   
+    animation-name: @animationname;
+    animation-duration: @duration;
+    margin-top: @hover-distance;//moves the button upwards during hovering
+    
+}//end animation-hover-mixin*/
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -269,6 +273,11 @@ header nav a {
   font-size: 1.6rem;
   padding: 20px;
 }
+@media (max-width: 500px) {
+  .footer p {
+    width: 100%;
+  }
+}
 .home .welcome-section {
   width: 100%;
   display: flex;
@@ -419,6 +428,13 @@ header nav a {
 .home .content-pick .destination .btn:hover {
   animation-name: button-hover;
   animation-duration: 3s;
-  margin-top: -5px;
   cursor: pointer;
+}
+@keyframes button-hover {
+  from {
+    background-color: #17A2B8;
+  }
+  to {
+    background-color: orangered;
+  }
 }
