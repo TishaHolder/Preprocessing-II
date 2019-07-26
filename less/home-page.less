@@ -1,24 +1,77 @@
 .home {
 
+  .welcome-section {
+    width: 100%;    
+    .flex-column();
+    justify-content: space-between;
+
+    @media @mobile {
+      width: 100%;
+    }
+
+    .welcome-image-div {
+      width: 100%;
+      border-top: 2px dashed @navigation-border;
+
+      @media @mobile {
+        width: 100%;
+      }
+
+    }
+
+    .welcome-text {
+      .flex-column();
+      //justify-content: space-between;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px dashed @navigation-border;
+
+      @media @mobile {
+        width: 100%;
+      }
+
+    }
+
+  }//end welcome section
+
   .content-section {
-    margin: 30px 0;
+    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      width: 100%;
+      flex-direction: column;
+    }   
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+        
+      }
+
     }
 
     .img-content {
       width: 48%;
-      padding-left: 1%;
+      padding-left: 1%;      
 
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+        }
+
+      }
+
+      @media @mobile {
+        width: 100%;
+        //padding: 0;
       }
     }
   }
@@ -27,20 +80,41 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {        
+        width: 100%;  
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
+
+    
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -53,9 +127,43 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      width: 100%;
+      justiy-content: center;
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
-  }
+
+      @media @mobile {
+        display: flex;
+        flex-direction: column;
+        //justiy-content: center;
+        //align-items: center;
+        width: 80%;
+      }
+
+      .btn {
+        .button-layout(@center-justify, @center-align, @eastern-blue);  
+
+       //button hover       
+       &:hover {
+
+          //.animation-hover-mixin(@animationname, @animationduration, @hover-distance); //calls parametric mixin that changes the button color and moves the button upwards
+          .animation-background-color(@eastern-blue, @funbus-red);
+          cursor: pointer; //changes cursor to finger pointer            
+
+       }         
+
+      }//end btn
+     
+         
+      
+    }//end destination
+
+  }//end content-pick
+
 }// home

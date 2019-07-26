@@ -1,1 +1,71 @@
 // Mixins in here
+
+.button-layout(@justify: center, @align: center, @background-color: @easternblue){
+	display: flex;
+	justify-content: @justify;
+    align-items: @align;
+    background-color: @eastern-blue;
+    width: 75%;
+    color: white;    
+    padding: 4% 10% 4% 10%;
+    font-size: 2rem;
+    border-radius: 10px;
+}
+
+.animation-background-color(@from-color, @to-color) {
+
+    @keyframes button-hover {
+
+       from {background-color:@from-color;}
+       to {background-color:@to-color;}
+    }
+    animation-name: button-hover;
+    animation-duration:3s;
+}
+
+//button hover keyframe
+/*@keyframes button-hover {
+    from {background-color: @eastern-blue;}
+    to {background-color: @funbus-red;}
+}
+
+//button hover mixin
+.animation-hover-mixin (@animationname, @duration, @hover-distance) {   
+    animation-name: @animationname;
+    animation-duration: @duration;
+    margin-top: @hover-distance;//moves the button upwards during hovering
+    
+}//end animation-hover-mixin*/
+
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links-align {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+}
